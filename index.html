@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>watchcharm</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
-  integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-    <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/index-BiPGnU4i.css">
+    <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/index-B66heCx8.css">
   </head>
 
-
-
   <body>
-    
     <!-- Хедер Олексія -->
     <header class="header">
   <div class="container">
@@ -85,7 +86,7 @@
         ></a>
       </li>
     </ul>
-    <button class="menu-btn" type="button">
+    <button class="menu-btn" type="button" data-menu-open>
       <svg class="menu-icon" width="34" height="34">
         <use href="/vanilla-app-template/assets/sprite-D8vaHkL9.svg#icon-menu"></use>
       </svg>
@@ -93,9 +94,9 @@
 
     <!------------------------------------------ menu ------------------------------------------->
 
-    <div class="modal-menu is-open">
+    <div class="modal-menu" data-menu>
       <div class="menu">
-        <button class="menu-close-btn" type="button">
+        <button class="menu-close-btn" type="button" data-menu-close>
           <svg class="menu-close-icon" width="34" height="34">
             <use href="/vanilla-app-template/assets/sprite-D8vaHkL9.svg#icon-close"></use>
           </svg>
@@ -171,9 +172,10 @@
       </div>
     </div>
   </div>
+
+  <script src="../main.js"></script>
 </header>
 
-   
 
     <main>
       <!-- Секція Ані -->
@@ -480,9 +482,8 @@
       </div>
     </div>
   </section>
-</main>
+    </main>
 
-    
     <!-- Футер Міли -->
     <footer class="footer container">
   <div class="footer-wrapper">
@@ -590,10 +591,5 @@
   </div>
 </footer>
 
-
   </body>
 </html>
-
-
-
-
