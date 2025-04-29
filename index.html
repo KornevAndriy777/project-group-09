@@ -15,7 +15,7 @@
     />
 
     <script type="module" crossorigin src="/project-group-09/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/project-group-09/assets/index-CyJCVyQ3.css">
+    <link rel="stylesheet" crossorigin href="/project-group-09/assets/index-B3C_8Tmp.css">
   </head>
 
   <body>
@@ -663,7 +663,10 @@
               placeholder="Name"
               required
             />
+            <p class="text-valid">Looks good!</p>
+            <p class="text-invalid">Please enter your name.</p>
           </div>
+        
           <div class="form-content">
             <input
               class="input-field"
@@ -674,7 +677,10 @@
               pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
               required
             />
+            <p class="text-valid">Valid email!</p>
+            <p class="text-invalid">Please enter a valid email.</p>
           </div>
+        
           <div class="form-content">
             <input
               class="input-field"
@@ -685,16 +691,23 @@
               pattern="^\+\d{3}-\d{2}-\d{3}-\d{2}-\d{2}$"
               required
             />
+            <p class="text-valid">Valid phone!</p>
+            <p class="text-invalid">Please enter a valid phone.</p>
           </div>
+        
           <div class="form-content">
             <textarea
-              id="user-comment"
               class="textarea-field"
               name="user-comment"
+              id="user-comment"
               rows="4"
               placeholder="Comment"
+              required
             ></textarea>
+            <p class="text-valid">Thanks for your comment!</p>
+            <p class="text-invalid">Please write a comment.</p>
           </div>
+        
           <button class="send-button" type="submit">Send</button>
         </form>
       </div>
