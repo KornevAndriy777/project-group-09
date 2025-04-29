@@ -1,3 +1,4 @@
+<!-- contact.html -->
 <section class="contact-section" id="contact-us">
   <div class="container">
     <h2 class="contact-heading">Contact Us</h2>
@@ -7,7 +8,8 @@
           Please use the form below to contact us. Enter your name, email,
           phone, and message and we'll get back to you shortly.
         </p>
-        <form class="form-container" autocomplete="on">
+        <form class="form-container" autocomplete="off">
+          
           <div class="form-content">
             <input
               class="input-field"
@@ -17,7 +19,10 @@
               placeholder="Name"
               required
             />
+            <p class="text-valid">Looks good!</p>
+            <p class="text-invalid">Please enter your name.</p>
           </div>
+          
           <div class="form-content">
             <input
               class="input-field"
@@ -28,7 +33,10 @@
               pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
               required
             />
+            <p class="text-valid">Valid email!</p>
+            <p class="text-invalid">Please enter a valid email.</p>
           </div>
+          
           <div class="form-content">
             <input
               class="input-field"
@@ -39,7 +47,10 @@
               pattern="^\+\d{3}-\d{2}-\d{3}-\d{2}-\d{2}$"
               required
             />
+            <p class="text-valid">Valid phone!</p>
+            <p class="text-invalid">Please enter a valid phone.</p>
           </div>
+          
           <div class="form-content">
             <textarea
               id="user-comment"
@@ -47,8 +58,12 @@
               name="user-comment"
               rows="4"
               placeholder="Comment"
+              required
             ></textarea>
+            <p class="text-valid">Thanks for your comment!</p>
+            <p class="text-invalid">Please write a comment.</p>
           </div>
+          
           <button class="send-button" type="submit">Send</button>
         </form>
       </div>
@@ -69,9 +84,7 @@
           <img
             src="/img/cont-mob-min.jpg"
             class="contact-image"
-            alt="image"
-            width="335"
-            height="512"
+            alt="Contact illustration"
           />
         </picture>
       </div>
