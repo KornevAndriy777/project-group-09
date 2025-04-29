@@ -1,23 +1,21 @@
-
 .contact-section {
-  padding-bottom: 30px;
   padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
   .contact-section {
-    padding-bottom: 40px;
     padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .contact-section {
+    padding-top: 50px;
     padding-bottom: 50px;
-    padding-top:50px;
   }
 }
-
 
 .contact-heading {
   font-weight: 600;
@@ -36,45 +34,28 @@
   }
 }
 
-
-.wrapper {
-  display: block;
-}
-
-@media screen and (min-width: 1280px) {
-  .wrapper {
-    display: flex;
-    gap: 40px;
-  }
-}
-
-
 .form-card {
   border-radius: 30px;
   padding: 48px 28px;
-  width: 335px;
-  height: 512px;
   background-color: #f3f3f3;
- 
+  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 768px) {
   .form-card {
     border-radius: 50px;
     padding: 50px 122px;
-    width: 704px;
-    height: 556px;
+    margin-bottom: 40px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .form-card {
     width: 580px;
-    height: 556px;
     padding: 50px 60px;
+    margin-bottom: 0;
   }
 }
-
 
 .card-subtitle {
   font-weight: 500;
@@ -93,27 +74,33 @@
   }
 }
 
-
 .form-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 18px;
 }
 
+.form-content {
+  width: 100%;
+}
+
+.textarea-field-wrapper {
+  width: 100%;
+}
 
 .input-field {
   border-radius: 12px;
+  width: 100%;
   padding: 12px 14px;
-  width: 279px;
-  height: 42px;
   background-color: transparent;
   border: 1px solid rgba(12, 12, 12, 0.15);
   transition: border-color 200ms ease-in-out 100ms;
   outline: none;
 }
 
-.input-field:focus {
+.input-field:hover,
+.input-field:focus,
+.input-field:focus-within {
   border-color: #1f3cd4;
 }
 
@@ -137,21 +124,15 @@
   }
 }
 
-
 .textarea-field {
   border: 1px solid rgba(12, 12, 12, 0.15);
   border-radius: 12px;
-  padding: 12px 14px 0;
-  width: 279px;
-  height: 84px;
+  padding: 12px 12px 0 14px;
+  width: 100%;
   background-color: transparent;
   resize: none;
   transition: border-color 200ms ease-in-out 100ms;
   outline: none;
-}
-
-.textarea-field:focus {
-  border-color: #1f3cd4;
 }
 
 .textarea-field::placeholder {
@@ -159,6 +140,12 @@
   font-size: 14px;
   line-height: 1.28;
   color: #0c0c0c;
+}
+
+.textarea-field:hover,
+.textarea-field:focus,
+.textarea-field:focus-within {
+  border-color: #1f3cd4;
 }
 
 @media screen and (min-width: 768px) {
@@ -173,7 +160,6 @@
     line-height: 1.25;
   }
 }
-
 
 .send-button {
   display: block;
@@ -190,7 +176,7 @@
   cursor: pointer;
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  margin-top: 10px;
+  
 }
 
 .send-button:hover,
@@ -208,21 +194,59 @@
 
 .contact-image {
   border-radius: 30px;
-  width: 335px;
-  height: 512px;
 }
 
 @media screen and (min-width: 768px) {
   .contact-image {
     border-radius: 50px;
-    width: 704px;
-    height: 556px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .contact-image {
-    width: 530px;
     position: absolute;
   }
+}
+
+.wrapper {
+  display: block;
+}
+
+@media screen and (min-width: 1280px) {
+  .wrapper {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+.input-field:not(:placeholder-shown):invalid {
+  border-color: red;
+}
+
+.input-field:not(:placeholder-shown):valid {
+  border-color: green;
+}
+
+.text-valid,
+.text-invalid {
+  font-size: 14px;
+  padding-left: 10px;
+  margin-top: 8px;
+  display: none;
+}
+
+.text-valid {
+  color: green;
+}
+
+.text-invalid {
+  color: red;
+}
+
+.input-field:not(:placeholder-shown):valid ~ .text-valid {
+  display: block;
+}
+
+.input-field:not(:placeholder-shown):invalid ~ .text-invalid {
+  display: block;
 }
