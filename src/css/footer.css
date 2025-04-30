@@ -1,4 +1,8 @@
 /* Footer styles */
+address {
+  font-style: normal;
+}
+
 .footer.container {
   padding-top: 30px;
   padding-bottom: 20px;
@@ -111,11 +115,6 @@
   text-align: center;
 }
 
-.footer-list-pages-reviews {
-  display: flex;
-  flex-direction: row;
-  gap: 8px 16px;
-}
 .footer-address {
   font-weight: 500;
   font-size: 12px;
@@ -165,6 +164,10 @@
     order: 1;
   }
 
+  .footer-wrapper-tablet {
+    margin-bottom: 0;
+  }
+
   .footer-socials {
     margin-bottom: auto;
   }
@@ -191,6 +194,7 @@
 
   .footer-tel {
     padding: 15px 15px;
+    height: 100%;
   }
   .footer-tel-link {
     font-size: 14px;
